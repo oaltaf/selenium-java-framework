@@ -26,13 +26,12 @@ public class LoginTestCRM extends BaseClass{
 	public void loginApp() {
 		
 		ExcelDataProvider excel = new ExcelDataProvider();
-		excel.getStringData("Login", 0, 0);
 		
 		System.out.println("I AM IN LOGIN APP FUNCTION");
 		
 		loginPage = new LoginPage();
 		System.out.println("DRIVER VALUE IN TEST ::  " + driver);
-		loginPage.loginToCRM(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
+		loginPage.loginToCRM(excel.getStringData("Login", 1, 0), excel.getStringData("Login", 1, 1));
 		
 		System.out.println("Testing");
 	
